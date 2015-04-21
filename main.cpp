@@ -35,6 +35,7 @@ int main()
         switch (input)
         {
             case 1: //initialize array
+                test.initializeArray();
                 break;
             case 2: //apply algorithms
                 break;
