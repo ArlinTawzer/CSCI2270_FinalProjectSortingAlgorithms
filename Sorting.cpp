@@ -53,8 +53,11 @@ void Sorting::createRandArray()
             randIndex = rand() % size1;
         }
         randArray[randIndex] = j;
-        cout << randArray[randIndex] << ", ";
     }
+	for (int i=0; i < size1; i++)
+    {
+        cout << randArray[i] << ", ";
+    }    
     cout << endl;
     cout << "Done generating random array" << endl;
     dataTable = randArray;
