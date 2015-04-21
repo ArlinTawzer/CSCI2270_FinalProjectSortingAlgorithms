@@ -38,10 +38,12 @@ int main()
                 test.initializeArray();
                 break;
             case 2: //apply algorithms
+                test.runAlgorithms();
                 break;
             case 3:  //display results
                 break;
             case 4: //learn more
+                test.moreInformation();
                 break;
             case 5:
                 cout << "Goodbye!" << endl;

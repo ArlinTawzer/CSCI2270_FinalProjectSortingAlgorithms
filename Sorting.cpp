@@ -23,6 +23,7 @@ void Sorting::initializeArray()
 void Sorting::runAlgorithms()
 {
 	int BubblesortValue = Bubblesort();
+	cout << "Bubblesort cost: " << BubblesortValue << endl;
 }
 
 int Sorting::Bubblesort()
@@ -31,9 +32,21 @@ int Sorting::Bubblesort()
 	int complexity = 0;
 
 	int *dataNew = copyArray();
-
-
-
+	printArray(dataNew);
+	/*int swap;
+    for(int i = 0; i < array_size-1; i++)
+    {
+        for(int j = 0; j < array_size - i - 1; j++){
+            if(dataNew[j] > dataNew[j+1]){
+                swap = dataNew[j];
+                dataNew[j] = dataNew[j+1];
+                dataNew[j+1] = swap;
+            }
+            complexity++;
+        }
+    }*/
+    //checkSort(dataNew);
+    //printArray(dataNew);
 	return complexity;
 }
 
@@ -79,6 +92,64 @@ void Sorting::printArray(int *array)
 	for (int i=0; i < array_size; i++)
     {
         cout << array[i] << ", ";
-    }    
+    }
+    cout << endl;
+}
+
+bool Sorting::checkSort(int *array) //function checks whether a given array is sorted or not.
+{
+	bool sorted = true;
+	for (int i = 0; i< array_size; i++)
+	{
+		if (array[i]<array[i-1])
+			sorted = false;
+	}
+	if (sorted)
+		cout << "data was successfully sorted" << endl;
+	else
+		cout << "the algorithm failed to successfully sort the data" << endl;
+
+	return sorted;
+}
+
+
+void Sorting::moreInformation() // use to give information on the sorting algorithms that we implement
+{
+	int input;
+    while(input != 5)
+    {
+    	cout << "What Would You Like More Information On?" << endl;
+		cout << "1. Bubble Sort" << endl;
+		cout << "2. Insertion Sort" << endl;
+		cout << "5. Go Back" << endl;
+		
+		cin >> input;
+        //clear out cin
+        cin.clear();
+        cin.ignore(10000,'\n');
+
+        switch (input)
+        {
+            case 1:
+            	cout << " a bubble sort is the best sort" << endl;
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                cout << "Goodbye!" << endl;
+                break;
+            default:
+                cout << "Invalid Input" << endl;
+                cin.clear();
+                cin.ignore(10000,'\n');
+                break;
+        }
+    }	
+	
+
 }
 	

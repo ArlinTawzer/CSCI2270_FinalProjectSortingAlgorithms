@@ -10,12 +10,14 @@ class Sorting
         void runAlgorithms();
         void createRandArray();
         int Bubblesort();
+        void moreInformation();
     protected:
     private:
-        int *copyArray();
         int *dataTable;
         int array_size; //use to know how many variables there are in the array
-        void printArray(int *array);
+        int *copyArray(); //return a copy of the array so that it can be sorted
+        void printArray(int *array); //print out all the values in the array
+        bool checkSort(int *array); //check the array and make sure it is sorted
 };
 
 #endif // SORTING_H
