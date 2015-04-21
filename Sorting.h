@@ -12,7 +12,10 @@ class Sorting
         int Bubblesort();
     protected:
     private:
+        int *copyArray();
         int *dataTable;
+        int array_size; //use to know how many variables there are in the array
+        void printArray(int *array);
 };
 
 #endif // SORTING_H
