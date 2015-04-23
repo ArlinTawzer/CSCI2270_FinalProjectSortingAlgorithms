@@ -12,7 +12,7 @@ class Sorting
         void createRandArray();
         int Bubblesort();
         void moreInformation();
-        void insertionSort();
+        int insertionSort();
     protected:
     private:
         std::vector<int> dataTable;

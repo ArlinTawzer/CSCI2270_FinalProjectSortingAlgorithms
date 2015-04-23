@@ -23,7 +23,9 @@ void Sorting::initializeArray()
 void Sorting::runAlgorithms()
 {
 	int BubblesortValue = Bubblesort();
-	cout << "Bubblesort cost: " << BubblesortValue << endl;
+	int insertionSortValue = insertionSort();
+	cout << "BubbleSort cost: " << Bubblesort() << endl;
+	cout << "InsertionSort cost: " << insertionSort() << endl;
 }
 
 int Sorting::Bubblesort()
@@ -119,6 +121,7 @@ void Sorting::moreInformation() // use to give information on the sorting algori
 	int input;
     while(input != 5)
     {
+        cout << "===========================================" << endl;
     	cout << "What Would You Like More Information On?" << endl;
 		cout << "1. Bubble Sort" << endl;
 		cout << "2. Insertion Sort" << endl;
@@ -132,9 +135,13 @@ void Sorting::moreInformation() // use to give information on the sorting algori
         switch (input)
         {
             case 1:
-            	cout << " a bubble sort is the best sort" << endl;
+                cout << "===========================================" << endl;
+            	cout << "A bubble sort is the best sort" << endl;
                 break;
             case 2:
+                cout << "===========================================" << endl;
+                cout << "Sorts the data using the insertion sort." << endl;
+                cout << "This is considered a one up from Bubble sort. Definitely." << endl;
                 break;
             case 3:
                 break;
@@ -154,13 +161,14 @@ void Sorting::moreInformation() // use to give information on the sorting algori
 
 }
 
-void Sorting::insertionSort()
+int Sorting::insertionSort()
 {
     //getting a copy of the array
     vector<int> dataNew(array_size);
     dataNew = dataTable;
-    printArray(dataNew);
+    //printArray(dataNew);
     int index = 0;
+    int complexity = 0;
 
     for (int i=1; i<dataNew.size(); i++)
     {
@@ -170,13 +178,15 @@ void Sorting::insertionSort()
         {
             dataNew[j] = dataNew[j-1];
             j--;
+            complexity++;
         }
         dataNew[j] = index;
+        complexity++;
     }
-    printArray(dataNew);
+    //printArray(dataNew);
 
     checkSort(dataNew);
-
+    return (complexity);
 }
 
 
