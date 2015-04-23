@@ -31,7 +31,7 @@ int Sorting::Bubblesort()
 	cout << "Applying bubble sort" << endl;
 	int complexity = 0;
 
-	int *dataNew = copyArray();
+	vector<int> dataNew = dataTable;
 	printArray(dataNew);
 	/*int swap;
     for(int i = 0; i < array_size-1; i++)
@@ -54,7 +54,8 @@ void Sorting::createRandArray()
 {
 	cout << "creating the random array" << endl;
     //Initialize the array
-    int randArray[array_size];
+    //int randArray[array_size];
+    vector<int> randArray(array_size);
     srand(time(NULL));
     for (int i=0; i < array_size; i++)
     {
@@ -87,7 +88,7 @@ int *Sorting::copyArray()
     return dataNew;
 }
 
-void Sorting::printArray(int *array)
+void Sorting::printArray(vector<int> array)
 {
 	for (int i=0; i < array_size; i++)
     {
@@ -122,7 +123,7 @@ void Sorting::moreInformation() // use to give information on the sorting algori
 		cout << "1. Bubble Sort" << endl;
 		cout << "2. Insertion Sort" << endl;
 		cout << "5. Go Back" << endl;
-		
+
 		cin >> input;
         //clear out cin
         cin.clear();
@@ -148,8 +149,15 @@ void Sorting::moreInformation() // use to give information on the sorting algori
                 cin.ignore(10000,'\n');
                 break;
         }
-    }	
-	
+    }
+
 
 }
-	
+
+void Sorting::insertionSort()
+{
+    vector<int> dataNew = dataTable;
+    printArray(dataNew);
+}
+
+

@@ -1,5 +1,6 @@
 #ifndef SORTING_H
 #define SORTING_H
+#include <vector>
 
 class Sorting
 {
@@ -11,12 +12,13 @@ class Sorting
         void createRandArray();
         int Bubblesort();
         void moreInformation();
+        void insertionSort();
     protected:
     private:
-        int *dataTable;
+        std::vector<int> dataTable;
         int array_size; //use to know how many variables there are in the array
         int *copyArray(); //return a copy of the array so that it can be sorted
-        void printArray(int *array); //print out all the values in the array
+        void printArray(std::vector<int> array); //print out all the values in the array
         bool checkSort(int *array); //check the array and make sure it is sorted
 };
 

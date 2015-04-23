@@ -48,6 +48,9 @@ int main()
             case 5:
                 cout << "Goodbye!" << endl;
                 break;
+            case 6:
+                test.insertionSort();
+                break;
             default:
                 cout << "Invalid Input" << endl;
                 cin.clear();
