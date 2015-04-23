@@ -189,4 +189,50 @@ int Sorting::insertionSort()
     return (complexity);
 }
 
+void Sorting::settings()
+{
+    int input;
+    while(input != 5)
+    {
+        cout << "===========================================" << endl;
+    	cout << "Welcome to the Settings menu, What would you like to do?" << endl;
+		cout << "1. Change Array Size" << endl;
+		cout << "5. Go Back" << endl;
+
+		cin >> input;
+        //clear out cin
+        cin.clear();
+        cin.ignore(10000,'\n');
+
+        switch (input)
+        {
+            case 1:
+                int input2;
+                cout << "===========================================" << endl;
+            	cout << "Current Array Size for generated array is: " << array_size << endl;
+            	cout << "What would you like to change it to?" << endl;
+            	cin >> input2;
+                cin.clear();
+                cin.ignore(10000,'\n');
+                array_size = input2;
+                cout << "Array Size successfully changed to: " << array_size << endl;
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                cout << "Goodbye!" << endl;
+                break;
+            default:
+                cout << "Invalid Input" << endl;
+                cin.clear();
+                cin.ignore(10000,'\n');
+                break;
+        }
+    }
+}
+
 

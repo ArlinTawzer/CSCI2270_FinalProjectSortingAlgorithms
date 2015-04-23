@@ -13,6 +13,7 @@ class Sorting
         int Bubblesort();
         void moreInformation();
         int insertionSort();
+        void settings();
     protected:
     private:
         std::vector<int> dataTable;

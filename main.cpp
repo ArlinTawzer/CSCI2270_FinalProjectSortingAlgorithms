@@ -13,7 +13,8 @@ void displayMenu()
     cout << "2. Apply Algorithms" << endl;
     cout << "3. Display results" << endl;
     cout << "4. Learn more" << endl; //we can use this to talk about the various algorithms and their complexities
-    cout << "5. Quit" << endl;
+    cout << "5. Settings" << endl;
+    cout << "6. Quit" << endl;
     return;
 }
 
@@ -24,7 +25,7 @@ int main()
     //get the users input
     int input;
     string title;
-    while(input != 5)
+    while(input != 6)
     {
         displayMenu();
         cin >> input;
@@ -46,10 +47,10 @@ int main()
                 test.moreInformation();
                 break;
             case 5:
-                cout << "Goodbye!" << endl;
+                test.settings();
                 break;
             case 6:
-                test.insertionSort();
+                cout << "Goodbye!" << endl;
                 break;
             default:
                 cout << "Invalid Input" << endl;
