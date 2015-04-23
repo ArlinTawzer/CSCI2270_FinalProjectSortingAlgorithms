@@ -14,6 +14,7 @@ class Sorting
         void moreInformation();
         int insertionSort();
         void settings();
+        void QuickSort(int random[], int left, int right);
     protected:
     private:
         std::vector<int> dataTable;

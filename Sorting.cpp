@@ -26,6 +26,7 @@ void Sorting::runAlgorithms()
 	int insertionSortValue = insertionSort();
 	cout << "BubbleSort cost: " << Bubblesort() << endl;
 	cout << "InsertionSort cost: " << insertionSort() << endl;
+	// Have to add quick sort in here once the format is switched to arrays again
 }
 
 int Sorting::Bubblesort()
@@ -235,4 +236,49 @@ void Sorting::settings()
     }
 }
 
+void QuickSort(int random[], int left, int right)
+{
+    int complexity = 0;     //setting up operations counter
+
+    int i = left;         //first index
+    int j = right;         //last index
+    int temp;
+    int pivot = random[ (left + right) / 2];      //finding the pivot
+
+    while (i <= j)       //going through the vector
+    {
+
+        while(random[i] < pivot)     //as long as the numbers before the pivot are less than the pivot
+        {
+            i++;  //continue along the vector
+        }
+
+        while(random[j] > pivot)      // as long as the numbers after the pivot are greater than the pivot
+        {
+            j--;  // continue along the vector
+        }
+
+        if (i <= j)   // if the two indexes meet
+        {
+            temp = random[i];
+            random[i] = random[j];
+            random[j] = temp;
+            i++;
+            j--;
+            complexity++;
+        }
+    }
+
+    if (left < j)
+    {
+        QuickSort(random, left, j);
+    }
+
+    if(i < right)
+    {
+        QuickSort(random, i, right);
+    }
+
+
+}
 
