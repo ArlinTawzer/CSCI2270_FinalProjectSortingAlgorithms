@@ -97,10 +97,10 @@ void Sorting::printArray(vector<int> array)
     cout << endl;
 }
 
-bool Sorting::checkSort(int *array) //function checks whether a given array is sorted or not.
+bool Sorting::checkSort(vector<int> array) //function checks whether a given array is sorted or not.
 {
 	bool sorted = true;
-	for (int i = 0; i< array_size; i++)
+	for (int i = 1; i< array_size; i++)
 	{
 		if (array[i]<array[i-1])
 			sorted = false;
@@ -156,8 +156,27 @@ void Sorting::moreInformation() // use to give information on the sorting algori
 
 void Sorting::insertionSort()
 {
-    vector<int> dataNew = dataTable;
+    //getting a copy of the array
+    vector<int> dataNew(array_size);
+    dataNew = dataTable;
     printArray(dataNew);
+    int index = 0;
+
+    for (int i=1; i<dataNew.size(); i++)
+    {
+        index = dataNew[i];
+        int j = i;
+        while (j>0 && dataNew[j-1]>index)
+        {
+            dataNew[j] = dataNew[j-1];
+            j--;
+        }
+        dataNew[j] = index;
+    }
+    printArray(dataNew);
+
+    checkSort(dataNew);
+
 }
 
 
