@@ -15,6 +15,7 @@ class Sorting
         int insertionSort();
         void settings();
         void QuickSort(int random[], int left, int right);
+        void SelectionSort( int someArray[], int arrSize);
     protected:
     private:
         std::vector<int> dataTable;

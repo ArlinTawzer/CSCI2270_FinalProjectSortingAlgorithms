@@ -27,6 +27,7 @@ void Sorting::runAlgorithms()
 	cout << "BubbleSort cost: " << Bubblesort() << endl;
 	cout << "InsertionSort cost: " << insertionSort() << endl;
 	// Have to add quick sort in here once the format is switched to arrays again
+	// Going to add Selection Sort
 }
 
 int Sorting::Bubblesort()
@@ -278,7 +279,26 @@ void QuickSort(int random[], int left, int right)
     {
         QuickSort(random, i, right);
     }
-
-
 }
 
+void SelectionSort( int someArray[], int arrSize)
+{
+    int minIndex;
+    int tmp;
+
+    for(int i = 0; i < arrSize - 1; i++)   //Iterating through array
+    {
+        minIndex = i;    //setting the first index to min
+        for(int j = i + 1; j < arrSize; j++)  //second loop for comparison
+        {
+            if(someArray[j] < someArray[minIndex]) //if theres a minimum thats not in the first index
+                minIndex = j;
+            if(minIndex != i)   //setting it to be in the proper index
+            {
+                tmp = someArray[i];
+                someArray[i] = someArray[minIndex];
+                someArray[minIndex] = tmp;
+            }
+        }
+    }
+}
