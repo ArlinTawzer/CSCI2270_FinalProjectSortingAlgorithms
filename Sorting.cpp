@@ -22,10 +22,15 @@ void Sorting::initializeArray()
 
 void Sorting::runAlgorithms()
 {
+
+    //Bubble Sort
 	int BubblesortValue = Bubblesort();
-	int insertionSortValue = insertionSort();
-	cout << "BubbleSort cost: " << Bubblesort() << endl;
-	cout << "InsertionSort cost: " << insertionSort() << endl;
+    BubblesortValue =  Bubblesort();
+    cout << "Bubblesort Cost: " << BubblesortValue;
+
+    //Insertion sort
+    int insertionSortValue = insertionSort();
+	cout << "InsertionSort cost: " << insertionSortValue << endl;
 	// Have to add quick sort in here once the format is switched to arrays again
 	// Going to add Selection Sort
 }
@@ -35,9 +40,9 @@ int Sorting::Bubblesort()
 	cout << "Applying bubble sort" << endl;
 	int complexity = 0;
 
-	vector<int> dataNew = dataTable;
+    int *dataNew = copyArray();
 	printArray(dataNew);
-	/*int swap;
+    int swap;
     for(int i = 0; i < array_size-1; i++)
     {
         for(int j = 0; j < array_size - i - 1; j++){
@@ -48,9 +53,10 @@ int Sorting::Bubblesort()
             }
             complexity++;
         }
-    }*/
-    //checkSort(dataNew);
-    //printArray(dataNew);
+    }
+    checkSort(dataNew);
+    printArray(dataNew);
+    delete dataNew;
 	return complexity;
 }
 
@@ -58,8 +64,8 @@ void Sorting::createRandArray()
 {
 	cout << "creating the random array" << endl;
     //Initialize the array
-    //int randArray[array_size];
-    vector<int> randArray(array_size);
+    int *randArray = new int[array_size];
+    
     srand(time(NULL));
     for (int i=0; i < array_size; i++)
     {
@@ -84,7 +90,7 @@ void Sorting::createRandArray()
 
 int *Sorting::copyArray()
 {
-	int dataNew[array_size];
+	int *dataNew = new int[array_size];
 	for (int i=0; i < array_size; i++)
     {
         dataNew[i] = dataTable[i];
@@ -92,7 +98,7 @@ int *Sorting::copyArray()
     return dataNew;
 }
 
-void Sorting::printArray(vector<int> array)
+void Sorting::printArray(int *array)
 {
 	for (int i=0; i < array_size; i++)
     {
@@ -101,7 +107,7 @@ void Sorting::printArray(vector<int> array)
     cout << endl;
 }
 
-bool Sorting::checkSort(vector<int> array) //function checks whether a given array is sorted or not.
+bool Sorting::checkSort(int *array) //function checks whether a given array is sorted or not.
 {
 	bool sorted = true;
 	for (int i = 1; i< array_size; i++)
@@ -166,13 +172,13 @@ void Sorting::moreInformation() // use to give information on the sorting algori
 int Sorting::insertionSort()
 {
     //getting a copy of the array
-    vector<int> dataNew(array_size);
+    int *dataNew = copyArray();
     dataNew = dataTable;
     //printArray(dataNew);
     int index = 0;
     int complexity = 0;
 
-    for (int i=1; i<dataNew.size(); i++)
+    for (int i=1; i<array_size; i++)
     {
         index = dataNew[i];
         int j = i;
