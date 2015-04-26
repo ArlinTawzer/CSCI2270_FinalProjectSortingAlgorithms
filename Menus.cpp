@@ -56,6 +56,7 @@ void Sorting::settings()
         cout << "===========================================" << endl;
     	cout << "Welcome to the Settings menu, What would you like to do?" << endl;
 		cout << "1. Change Array Size" << endl;
+		cout << "2. Use Special Array Case" << endl;
 		cout << "5. Go Back" << endl;
 
 		cin >> input;
@@ -74,9 +75,19 @@ void Sorting::settings()
                 cin.clear();
                 cin.ignore(10000,'\n');
                 array_size = input2;
+                initializeArray();
                 cout << "Array Size successfully changed to: " << array_size << endl;
                 break;
             case 2:
+                cout << "===========================================" << endl;
+            	cout << "Which case would you like to use?" << array_size << endl;
+            	cout << "1. Last and First values switched" << endl;
+            	cout << "2. Already sorted" << endl;
+            	cout << "3. Perfectly Reversed" << endl;
+            	cin >> input2;
+                cin.clear();
+                cin.ignore(10000,'\n');
+                specialCases(input2);
                 break;
             case 3:
                 break;

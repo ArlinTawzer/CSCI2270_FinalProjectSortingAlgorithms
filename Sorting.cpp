@@ -101,3 +101,38 @@ bool Sorting::checkSort(int *array) //function checks whether a given array is s
 
 	return sorted;
 }
+
+void Sorting::specialCases(int value)
+{
+    //no need to allocate new memory, just copy over new values
+    if (value == 1)
+    {
+        dataTable[0] = array_size;
+        dataTable[array_size-1] = 1;
+        for (int i=1; i < array_size-2; i++)
+        {
+            dataTable[i] = i+1;
+        }
+        printArray(dataTable);
+        cout << "First and Last values are out of place" << endl;
+    }
+    else if (value == 2)
+    {
+        for (int i=0; i < array_size; i++)
+        {
+            dataTable[i] = i+1;
+        }
+        printArray(dataTable);
+        cout << "Array is already sorted" << endl;
+    }
+    else if (value == 3)
+    {
+        for (int i=0; i<array_size; i++)
+        {
+            dataTable[i] = array_size-i;
+        }
+        printArray(dataTable);
+        cout << "Array is perfectly reversed" << endl;
+    }
+}
+

@@ -58,6 +58,7 @@ int Sorting::insertionSort()
     return (complexity);
 }
 
+//Still needs to be made compatible
 int Sorting::QuickSort(int random[], int left, int right)
 {
     int complexity = 0;     //setting up operations counter
