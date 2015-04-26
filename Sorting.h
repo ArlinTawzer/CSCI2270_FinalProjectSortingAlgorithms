@@ -11,6 +11,7 @@ class Sorting
         void runAlgorithms();
         void createRandArray();
         int Bubblesort();
+        int ExchangeSort();
         void moreInformation();
         int insertionSort();
         void settings();
