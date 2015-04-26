@@ -17,6 +17,8 @@ class Sorting
         void settings();
         int QuickSort(int random[], int left, int right);
         int SelectionSort();
+        int ShellSort();
+        void specialCases(int value);
     protected:
     private:
         int *dataTable;
