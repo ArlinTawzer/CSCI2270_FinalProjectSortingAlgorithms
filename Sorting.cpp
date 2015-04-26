@@ -32,9 +32,14 @@ void Sorting::runAlgorithms()
     int insertionSortValue = insertionSort();
 	cout << "Insertion Sort cost: " << insertionSortValue << endl;
 
-	//Quick Sort
+	//Selection Sort
 	int selectionSortValue = SelectionSort();
 	cout << "Selection Sort cost: " << selectionSortValue << endl;
+
+	//Shell Sort
+	int shellSortValue = ShellSort();
+	cout << "Shell Sort cost: " << shellSortValue << endl;
+
 	// Have to add quick sort in here once the format is switched to arrays again
 	// Going to add Selection Sort
 }

@@ -132,3 +132,32 @@ int Sorting::SelectionSort()
 
     return complexity;
 }
+
+int Sorting::ShellSort()
+{
+    int complexity = 0;
+    int flag = 1;
+    int temp;
+    int d = array_size;
+
+    while (flag > 0 || d > 1)
+    {
+        flag = 0;
+        d = (d+1)/2;
+        for (int i=0; i < array_size - d; i++)
+        {
+            if (dataTable[i+d] < dataTable[i])
+            {
+                temp = dataTable[i+d];
+                dataTable[i+d] = dataTable[i];
+                dataTable[i] = temp;
+                flag = 1;
+            }
+            complexity++;
+        }
+        complexity++;
+    }
+    //checkSort(dataTable);
+    //printArray(dataTable);
+    return complexity;
+}
