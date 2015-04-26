@@ -14,8 +14,8 @@ class Sorting
         void moreInformation();
         int insertionSort();
         void settings();
-        void QuickSort(int random[], int left, int right);
-        void SelectionSort( int someArray[], int arrSize);
+        int QuickSort(int random[], int left, int right);
+        int SelectionSort();
     protected:
     private:
         int *dataTable;

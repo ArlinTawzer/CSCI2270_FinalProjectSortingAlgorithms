@@ -26,11 +26,15 @@ void Sorting::runAlgorithms()
     //Bubble Sort
 	int BubblesortValue = Bubblesort();
     BubblesortValue =  Bubblesort();
-    cout << "Bubblesort Cost: " << BubblesortValue;
+    cout << "Bubble Sort Cost: " << BubblesortValue << endl;
 
     //Insertion sort
     int insertionSortValue = insertionSort();
-	cout << "InsertionSort cost: " << insertionSortValue << endl;
+	cout << "Insertion Sort cost: " << insertionSortValue << endl;
+
+	//Quick Sort
+	int selectionSortValue = SelectionSort();
+	cout << "Selection Sort cost: " << selectionSortValue << endl;
 	// Have to add quick sort in here once the format is switched to arrays again
 	// Going to add Selection Sort
 }
@@ -40,7 +44,7 @@ void Sorting::createRandArray()
 	cout << "creating the random array" << endl;
     //Initialize the array
     int *randArray = new int[array_size];
-    
+
     srand(time(NULL));
     for (int i=0; i < array_size; i++)
     {

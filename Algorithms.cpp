@@ -24,8 +24,8 @@ int Sorting::Bubblesort()
             complexity++;
         }
     }
-    checkSort(dataNew);
-    printArray(dataNew);
+    //checkSort(dataNew);
+    //printArray(dataNew);
     delete dataNew;
 	return complexity;
 }
@@ -54,11 +54,11 @@ int Sorting::insertionSort()
     }
     //printArray(dataNew);
 
-    checkSort(dataNew);
+    //checkSort(dataNew);
     return (complexity);
 }
 
-void QuickSort(int random[], int left, int right)
+int Sorting::QuickSort(int random[], int left, int right)
 {
     int complexity = 0;     //setting up operations counter
 
@@ -100,26 +100,34 @@ void QuickSort(int random[], int left, int right)
     {
         QuickSort(random, i, right);
     }
+    return complexity;
 }
 
-void SelectionSort( int someArray[], int arrSize)
+int Sorting::SelectionSort()
 {
     int minIndex;
+    int complexity = 0;
     int tmp;
+    int *dataNew = copyArray();
+    dataNew = dataTable;
 
-    for(int i = 0; i < arrSize - 1; i++)   //Iterating through array
+    for (int i = 0; i < array_size - 1; i++)   //Iterating through array
     {
         minIndex = i;    //setting the first index to min
-        for(int j = i + 1; j < arrSize; j++)  //second loop for comparison
+        for(int j = i + 1; j < array_size; j++)  //second loop for comparison
         {
-            if(someArray[j] < someArray[minIndex]) //if theres a minimum thats not in the first index
+            if(dataNew[j] < dataNew[minIndex]) //if theres a minimum thats not in the first index
                 minIndex = j;
             if(minIndex != i)   //setting it to be in the proper index
             {
-                tmp = someArray[i];
-                someArray[i] = someArray[minIndex];
-                someArray[minIndex] = tmp;
+                tmp = dataNew[i];
+                dataNew[i] = dataNew[minIndex];
+                dataNew[minIndex] = tmp;
             }
+            complexity++;
         }
+        complexity++;
     }
+
+    return complexity;
 }
