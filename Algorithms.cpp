@@ -58,7 +58,7 @@ int Sorting::insertionSort()
 {
     //getting a copy of the array
     int *dataNew = copyArray();
-    dataNew = dataTable;
+    
     //printArray(dataNew);
     int index = 0;
     int complexity = 0;
@@ -134,8 +134,7 @@ int Sorting::SelectionSort()
     int complexity = 0;
     int tmp;
     int *dataNew = copyArray();
-    dataNew = dataTable;
-
+    
     for (int i = 0; i < array_size - 1; i++)   //Iterating through array
     {
         minIndex = i;    //setting the first index to min
@@ -164,24 +163,26 @@ int Sorting::ShellSort()
     int temp;
     int d = array_size;
 
+    int *dataNew = copyArray();
+
     while (flag > 0 || d > 1)
     {
         flag = 0;
         d = (d+1)/2;
         for (int i=0; i < array_size - d; i++)
         {
-            if (dataTable[i+d] < dataTable[i])
+            if (dataNew[i+d] < dataNew[i])
             {
-                temp = dataTable[i+d];
-                dataTable[i+d] = dataTable[i];
-                dataTable[i] = temp;
+                temp = dataNew[i+d];
+                dataNew[i+d] = dataNew[i];
+                dataNew[i] = temp;
                 flag = 1;
             }
             complexity++;
         }
         complexity++;
     }
-    //checkSort(dataTable);
-    //printArray(dataTable);
+    //checkSort(dataNew);
+    //printArray(dataNew);
     return complexity;
 }
