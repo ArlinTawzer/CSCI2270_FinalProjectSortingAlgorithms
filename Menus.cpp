@@ -14,6 +14,8 @@ void Sorting::moreInformation() // use to give information on the sorting algori
     	cout << "What Would You Like More Information On?" << endl;
 		cout << "1. Bubble Sort" << endl;
 		cout << "2. Insertion Sort" << endl;
+        cout << "3. Selection Sort" << endl;
+        cout << "4. Quick Sort" << endl;
 		cout << "5. Go Back" << endl;
 
 		cin >> input;
@@ -25,16 +27,20 @@ void Sorting::moreInformation() // use to give information on the sorting algori
         {
             case 1:
                 cout << "===========================================" << endl;
-            	cout << "A bubble sort is the best sort" << endl;
+            	cout << "A bubble sort has complexity of n^2" << endl;
+                cout << "The most difficult order is when the array is in reverse order where the largest value is at the front and so on." << endl;
                 break;
             case 2:
                 cout << "===========================================" << endl;
-                cout << "Sorts the data using the insertion sort." << endl;
-                cout << "This is considered a one up from Bubble sort. Definitely." << endl;
+                cout << "Insertion Sort has complexity of n^2." << endl;
                 break;
             case 3:
+                cout << "===========================================" << endl;
+                cout << "Selection Sort has complexity of n^2." << endl;
                 break;
             case 4:
+                cout << "===========================================" << endl;
+                cout << "Quick sort in the worst case scenario is n^2 however it's generally of nlog(n) complexity" << endl;
                 break;
             case 5:
                 cout << "Goodbye!" << endl;

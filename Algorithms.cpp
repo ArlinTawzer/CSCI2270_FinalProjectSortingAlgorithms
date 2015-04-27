@@ -7,12 +7,11 @@ using namespace std;
 
 int Sorting::Bubblesort()
 {
-	cout << "Applying bubble sort" << endl;
+	//cout << "Applying bubble sort" << endl;
 	int complexity = 0;
 
     int *dataNew = copyArray();
-	printArray(dataNew);
-    int swap;
+	int swap;
     for(int i = 0; i < array_size-1; i++)
     {
         for(int j = 0; j < array_size - i - 1; j++){

@@ -66,7 +66,7 @@ void Sorting::createRandArray()
         }
         randArray[randIndex] = j;
     }
-    printArray(randArray);
+    //printArray(randArray);
     cout << endl;
     cout << "Done generating random array" << endl;
     dataTable = randArray;
