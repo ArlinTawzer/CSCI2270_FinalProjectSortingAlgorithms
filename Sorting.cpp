@@ -40,6 +40,10 @@ void Sorting::runAlgorithms()
 	int shellSortValue = ShellSort();
 	cout << "Shell Sort cost: " << shellSortValue << endl;
 
+	//Exchange Sort
+	int exchangeSortValue = ExchangeSort();
+	cout << "Exchange Sort cost: " << exchangeSortValue << endl;
+
 	// Have to add quick sort in here once the format is switched to arrays again
 	// Going to add Selection Sort
 }
@@ -47,7 +51,8 @@ void Sorting::runAlgorithms()
 void Sorting::createRandArray()
 {
 	cout << "creating the random array" << endl;
-    //Initialize the array
+    //Initialize the array and delete the old one
+    delete[] dataTable;
     int *randArray = new int[array_size];
 
     srand(time(NULL));

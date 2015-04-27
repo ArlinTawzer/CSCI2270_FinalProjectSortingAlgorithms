@@ -22,10 +22,11 @@ int Sorting::Bubblesort()
             }
             complexity++;
         }
+        complexity++;
     }
-    //checkSort(dataNew);
+    checkSort(dataNew);
     //printArray(dataNew);
-    delete dataNew;
+    delete[] dataNew;
 	return complexity;
 }
 
@@ -35,22 +36,23 @@ int Sorting::ExchangeSort()
     int complexity = 0;
 
     int *dataNew = copyArray();
-	printArray(dataNew);
+	//printArray(dataNew);
     int swap;
     for(int i = 0; i < array_size-1; i++)
     {
         for(int j = i+1; j < array_size; j++){
-            if(dataNew[i] < dataNew[j]){
+            if(dataNew[i] > dataNew[j]){
                 swap = dataNew[i];
                 dataNew[i] = dataNew[j];
                 dataNew[j] = swap;
             }
             complexity++;
         }
+        complexity++;
     }
     //checkSort(dataNew);
     //printArray(dataNew);
-    delete dataNew;
+    delete[] dataNew;
 	return complexity;
 }
 
@@ -58,7 +60,7 @@ int Sorting::insertionSort()
 {
     //getting a copy of the array
     int *dataNew = copyArray();
-    
+
     //printArray(dataNew);
     int index = 0;
     int complexity = 0;
@@ -79,6 +81,7 @@ int Sorting::insertionSort()
     //printArray(dataNew);
 
     //checkSort(dataNew);
+    delete[] dataNew;
     return (complexity);
 }
 
@@ -125,6 +128,7 @@ int Sorting::QuickSort(int random[], int left, int right)
     {
         QuickSort(random, i, right);
     }
+    //delete[] dataNew;
     return complexity;
 }
 
@@ -134,7 +138,7 @@ int Sorting::SelectionSort()
     int complexity = 0;
     int tmp;
     int *dataNew = copyArray();
-    
+
     for (int i = 0; i < array_size - 1; i++)   //Iterating through array
     {
         minIndex = i;    //setting the first index to min
@@ -152,7 +156,7 @@ int Sorting::SelectionSort()
         }
         complexity++;
     }
-
+    delete[] dataNew;
     return complexity;
 }
 
@@ -184,5 +188,6 @@ int Sorting::ShellSort()
     }
     //checkSort(dataNew);
     //printArray(dataNew);
+    delete[] dataNew;
     return complexity;
 }
