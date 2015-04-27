@@ -44,13 +44,14 @@ void Sorting::runAlgorithms()
 	int exchangeSortValue = ExchangeSort();
 	cout << "Exchange Sort cost: " << exchangeSortValue << endl;
 
-	// Have to add quick sort in here once the format is switched to arrays again
-	// Going to add Selection Sort
+	// Quick Sort
+	int quickSortValue = QuickSort();
+	cout << "Quick Sort cost: " << quickSortValue << endl;
 }
 
 void Sorting::createRandArray()
 {
-	cout << "creating the random array" << endl;
+	cout << "Creating the random array" << endl;
     //Initialize the array and delete the old one
     delete[] dataTable;
     int *randArray = new int[array_size];

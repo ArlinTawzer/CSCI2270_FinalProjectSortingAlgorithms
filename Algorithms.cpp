@@ -24,7 +24,7 @@ int Sorting::Bubblesort()
         }
         complexity++;
     }
-    checkSort(dataNew);
+    //checkSort(dataNew);
     //printArray(dataNew);
     delete[] dataNew;
 	return complexity;
@@ -32,7 +32,7 @@ int Sorting::Bubblesort()
 
 int Sorting::ExchangeSort()
 {
-    cout << "Applying Exchange Sort" <<endl;
+    //cout << "Applying Exchange Sort" <<endl;
     int complexity = 0;
 
     int *dataNew = copyArray();
@@ -85,7 +85,22 @@ int Sorting::insertionSort()
     return (complexity);
 }
 
-//Still needs to be made compatible
+int Sorting::QuickSort()
+{
+    int *dataNew = copyArray();
+
+    int beginingIndex = 0;
+    int endIndex = array_size;
+
+    int QuickSortCost = 0;
+
+    QuickSortCost = QuickSort(dataNew, beginingIndex, endIndex);
+
+    //checkSort(dataNew);
+    delete[] dataNew;   //Freeing the memory
+    return QuickSortCost;
+}
+
 int Sorting::QuickSort(int random[], int left, int right)
 {
     int complexity = 0;     //setting up operations counter
@@ -95,17 +110,17 @@ int Sorting::QuickSort(int random[], int left, int right)
     int temp;
     int pivot = random[ (left + right) / 2];      //finding the pivot
 
-    while (i <= j)       //going through the vector
+    while (i <= j)       //going through the array
     {
 
         while(random[i] < pivot)     //as long as the numbers before the pivot are less than the pivot
         {
-            i++;  //continue along the vector
+            i++;  //continue along the array
         }
 
         while(random[j] > pivot)      // as long as the numbers after the pivot are greater than the pivot
         {
-            j--;  // continue along the vector
+            j--;  // continue along the array
         }
 
         if (i <= j)   // if the two indexes meet
@@ -121,14 +136,13 @@ int Sorting::QuickSort(int random[], int left, int right)
 
     if (left < j)
     {
-        QuickSort(random, left, j);
+        complexity += QuickSort(random, left, j);
     }
 
     if(i < right)
     {
-        QuickSort(random, i, right);
+        complexity += QuickSort(random, i, right);
     }
-    //delete[] dataNew;
     return complexity;
 }
 

@@ -40,7 +40,7 @@ void Sorting::moreInformation() // use to give information on the sorting algori
                 break;
             case 4:
                 cout << "===========================================" << endl;
-                cout << "Quick sort in the worst case scenario is n^2 however it's generally of nlog(n) complexity" << endl;
+                cout << "Quick sort in the worst case scenario is n^2. However, it's generally of nlog(n) complexity" << endl;
                 break;
             case 5:
                 cout << "Goodbye!" << endl;

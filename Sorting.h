@@ -15,6 +15,7 @@ class Sorting
         void moreInformation();
         int insertionSort();
         void settings();
+        int QuickSort();
         int QuickSort(int random[], int left, int right);
         int SelectionSort();
         int ShellSort();
