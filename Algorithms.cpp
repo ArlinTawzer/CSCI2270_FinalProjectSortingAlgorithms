@@ -39,31 +39,7 @@ int Sorting::Bubblesort()
 	return complexity;
 }
 
-int Sorting::ExchangeSort()
-{
-    //cout << "Applying Exchange Sort" <<endl;
-    int complexity = 0;
 
-    int *dataNew = copyArray();
-	//printArray(dataNew);
-    int swap;
-    for(int i = 0; i < array_size-1; i++)
-    {
-        for(int j = i+1; j < array_size; j++){
-            if(dataNew[i] > dataNew[j]){
-                swap = dataNew[i];
-                dataNew[i] = dataNew[j];
-                dataNew[j] = swap;
-            }
-            complexity++;
-        }
-        complexity++;
-    }
-    //checkSort(dataNew);
-    //printArray(dataNew);
-    delete[] dataNew;
-	return complexity;
-}
 
 /*
 Function Description:
