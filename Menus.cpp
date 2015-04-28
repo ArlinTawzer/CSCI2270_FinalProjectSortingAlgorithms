@@ -8,7 +8,7 @@ using namespace std;
 void Sorting::moreInformation() // use to give information on the sorting algorithms that we implement
 {
 	int input;
-    while(input != 5)
+    while(input != 6)
     {
         cout << "===========================================" << endl;
     	cout << "What Would You Like More Information On?" << endl;
@@ -16,7 +16,8 @@ void Sorting::moreInformation() // use to give information on the sorting algori
 		cout << "2. Insertion Sort" << endl;
         cout << "3. Selection Sort" << endl;
         cout << "4. Quick Sort" << endl;
-		cout << "5. Go Back" << endl;
+        cout << "5. Gnome Sort" << endl;
+		cout << "6. Go Back" << endl;
 
 		cin >> input;
         //clear out cin
@@ -43,6 +44,11 @@ void Sorting::moreInformation() // use to give information on the sorting algori
                 cout << "Quick sort in the worst case scenario is n^2. However, it's generally of nlog(n) complexity" << endl;
                 break;
             case 5:
+                cout << "===========================================" << endl;
+                cout << "Gnome Sort has a worst case complexity of n^2." << endl;
+                cout << "The best case has a complexity of just n but that is when the array is almost sorted already." << endl;
+                break;
+            case 6:
                 cout << "Goodbye!" << endl;
                 break;
             default:
