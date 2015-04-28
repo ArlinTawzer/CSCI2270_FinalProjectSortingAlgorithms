@@ -6,6 +6,13 @@
 
 using namespace std;
 
+/*
+Function Description:
+Displays a menu on the terminal window. Have to incorporate with the main in order to actually run the functions.
+
+Pre-conditions: Nothing needs to be passed in.
+Post-conditions: Displays a menu so the user knows exactly what to input.
+*/
 void displayMenu()
 {
     cout << "======Main Menu======" << endl;
@@ -46,7 +53,7 @@ int main()
             case 4: //learn more
                 test.moreInformation();
                 break;
-            case 5:
+            case 5: // change the array settings
                 test.settings();
                 break;
             case 6:

@@ -76,12 +76,12 @@ Post-conditions: Each time this function is called it frees the memory for the p
 */
 void Sorting::createRandArray()
 {
-	cout << "Creating the random array" << endl;
+	cout << "Creating the random array..." << endl;
     //Initialize the array and delete the old one
     delete[] dataTable;
     int *randArray = new int[array_size];
 
-    srand(time(NULL));
+    srand(time(NULL));                    //imported a library that has a rand method
     for (int i=0; i < array_size; i++)
     {
         randArray[i] = 0;
@@ -99,8 +99,8 @@ void Sorting::createRandArray()
     }
     //printArray(randArray);
     cout << endl;
-    cout << "Done generating random array" << endl;
-    dataTable = randArray;
+    cout << "Done generating random array." << endl;
+    dataTable = randArray;          //Changing the global variable
 }
 /*
 Function Description:
@@ -151,9 +151,9 @@ bool Sorting::checkSort(int *array) //function checks whether a given array is s
 			sorted = false;
 	}
 	if (sorted)
-		cout << "data was successfully sorted" << endl;
+		cout << "Data was successfully sorted." << endl;
 	else
-		cout << "the algorithm failed to successfully sort the data" << endl;
+		cout << "The algorithm failed to successfully sort the data." << endl;
 
 	return sorted;
 }

@@ -68,6 +68,7 @@ void Sorting::moreInformation() // use to give information on the sorting algori
         }
     }
 }
+
 /*
 Function Description:
 The settings function allows the user to change the array size as well as how the array is organized.
@@ -116,10 +117,6 @@ void Sorting::settings()
                 cin.clear();
                 cin.ignore(10000,'\n');
                 specialCases(input2);
-                break;
-            case 3:
-                break;
-            case 4:
                 break;
             case 5:
                 cout << "Goodbye!" << endl;
