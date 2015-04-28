@@ -9,6 +9,7 @@ using namespace std;
 Function Description:
 This function applies the algorithm for bubble sort to the array that is created by the initializeArray function.
 The algorithm loops through the entire array and compares each index with the next and swaps them accordingly.
+Shifts the greater value up the array.
 
 Pre-conditions: Requires nothing to be passed in since the copyArray function is used within.
 Post-conditions: Returns the number of operations that had to be done in order to sort the array. Memory freed by deleting the array created.
@@ -24,7 +25,7 @@ int Sorting::Bubblesort()
     {
         for(int j = 0; j < array_size - i - 1; j++){
             if(dataNew[j] > dataNew[j+1]){
-                swap = dataNew[j];
+                swap = dataNew[j];                 //swapping the values that are adjacent to each other
                 dataNew[j] = dataNew[j+1];
                 dataNew[j+1] = swap;
             }
@@ -85,13 +86,13 @@ int Sorting::insertionSort()
     {
         index = dataNew[i];
         int j = i;
-        while (j>0 && dataNew[j-1]>index)
+        while (j>0 && dataNew[j-1]>index)    //comparing the value to the value prior
         {
-            dataNew[j] = dataNew[j-1];
+            dataNew[j] = dataNew[j-1];    //going down the array until the while loop is violated
             j--;
             complexity++;
         }
-        dataNew[j] = index;
+        dataNew[j] = index;      //Once the loop is exited the value is placed where it should belong
         complexity++;
     }
     //printArray(dataNew);
@@ -231,15 +232,15 @@ int Sorting::ShellSort()
 
     int *dataNew = copyArray();
 
-    while (flag > 0 || d > 1)
+    while (flag > 0 || d > 1)    //Looping through the array until the gap is less than 1
     {
         flag = 0;
-        d = (d+1)/2;
+        d = (d+1)/2;           //Decreasing the gap
         for (int i=0; i < array_size - d; i++)
         {
-            if (dataNew[i+d] < dataNew[i])
+            if (dataNew[i+d] < dataNew[i])      //comparing two values that are separated by a gap
             {
-                temp = dataNew[i+d];
+                temp = dataNew[i+d];      // this is the swap
                 dataNew[i+d] = dataNew[i];
                 dataNew[i] = temp;
                 flag = 1;
@@ -272,9 +273,9 @@ int Sorting::GnomeSort()
 
     while(position < array_size)
     {
-        if (dataNew[position] >= dataNew[position-1] || position == 0)    //Start the index at one to compare it with the previous
+        if (dataNew[position] >= dataNew[position-1] || position == 0)    //Start the index at one to compare it with the value at the previous index
         {
-            position = position +1;
+            position = position +1;    //Iterate if the array at those two points are correct
         }
         else
         {
