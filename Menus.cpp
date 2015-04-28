@@ -115,7 +115,7 @@ void Sorting::settings()
                 break;
             case 2:
                 cout << "===========================================" << endl;
-            	cout << "Which case would you like to use?" << array_size << endl;
+            	cout << "Which case would you like to use?" << endl;
             	cout << "1. Last and First values switched" << endl;
             	cout << "2. Already sorted" << endl;
             	cout << "3. Perfectly Reversed" << endl;

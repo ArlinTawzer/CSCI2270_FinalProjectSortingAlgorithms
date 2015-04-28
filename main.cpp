@@ -27,7 +27,7 @@ void displayMenu()
 
 int main()
 {
-    Sorting test;
+    Sorting test = Sorting();
 
     //get the users input
     int input;

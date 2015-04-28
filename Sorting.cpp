@@ -35,10 +35,15 @@ Post-conditions: Displays the cost for each kind of sort that the team has imple
 */
 void Sorting::runAlgorithms()
 {
+    //Preliminary Check to make sure the array is initialized
+    if (dataTable == nullptr)
+    {
+        cout << "Initialize Array first please" << endl;
+        return;
+    }
 
     //Bubble Sort
 	int BubblesortValue = Bubblesort();
-    BubblesortValue =  Bubblesort();
     cout << "Bubble Sort Cost: " << BubblesortValue << endl;
 
     //Insertion sort
@@ -167,6 +172,11 @@ Post-conditions: Changes the ordering of the global array and prints it out for 
 */
 void Sorting::specialCases(int value)
 {
+    if (dataTable == nullptr)
+    {
+        cout << "Initialize Array first please" << endl;
+        return;
+    }
     //no need to allocate new memory, just copy over new values
     if (value == 1)
     {

@@ -125,11 +125,13 @@ int Sorting::QuickSort(int random[], int left, int right)
         while(random[i] < pivot)     //as long as the numbers before the pivot are less than the pivot
         {
             i++;  //continue along the array
+            complexity++;
         }
 
         while(random[j] > pivot)      // as long as the numbers after the pivot are greater than the pivot
         {
             j--;  // continue along the array
+            complexity++;
         }
 
         if (i <= j)   // if the two indexes meet
@@ -141,6 +143,7 @@ int Sorting::QuickSort(int random[], int left, int right)
             j--;
             complexity++;
         }
+        complexity++;
     }
 
     if (left < j)
