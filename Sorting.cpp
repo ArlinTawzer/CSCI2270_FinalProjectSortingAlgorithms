@@ -76,7 +76,7 @@ void Sorting::createRandArray()
     //Initialize the array and delete the old one
     if (dataTable != NULL)
     {
-        cout << " In if" << endl;
+        //cout << " In if" << endl;
         delete[] dataTable;
     }
     int *randArray = new int[array_size];
