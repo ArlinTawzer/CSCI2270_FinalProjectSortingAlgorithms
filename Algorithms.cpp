@@ -5,6 +5,14 @@
 
 using namespace std;
 
+/*
+Function Description:
+This function applies the algorithm for bubble sort to the array that is created by the initializeArray function.
+The algorithm loops through the entire array and compares each index with the next and swaps them accordingly.
+
+Pre-conditions: Requires nothing to be passed in since the copyArray function is used within.
+Post-conditions: Returns the number of operations that had to be done in order to sort the array. Memory freed by deleting the array created.
+*/
 int Sorting::Bubblesort()
 {
 	//cout << "Applying bubble sort" << endl;
@@ -56,6 +64,14 @@ int Sorting::ExchangeSort()
 	return complexity;
 }
 
+/*
+Function Description:
+This function applies the algorithm for insertion sort to the array that is created by the initializeArray function.
+The algorithm finds a value thats out of place and compares it down the array and inserts it when the previous index is less than the value in question.
+
+Pre-conditions: Requires nothing to be passed in since the copyArray function is used within.
+Post-conditions: Returns the number of operations that had to be done in order to sort the array. Memory freed by deleting the array created.
+*/
 int Sorting::insertionSort()
 {
     //getting a copy of the array
@@ -85,6 +101,14 @@ int Sorting::insertionSort()
     return (complexity);
 }
 
+/*
+Function Description:
+This function calls the other quick sort function which has the algorithm implemented. This function just passes in an array and the beginning and end index to the
+other quick sort function.
+
+Pre-conditions: Requires nothing to be passed in since it just calls another function.
+Post-conditions: Returns the number of operations that had to be done in order to sort the array. Memory freed by deleting the array created.
+*/
 int Sorting::QuickSort()
 {
     int *dataNew = copyArray();
@@ -100,7 +124,15 @@ int Sorting::QuickSort()
     delete[] dataNew;   //Freeing the memory
     return QuickSortCost;
 }
+/*
+Function Description:
+This function applies the algorithm for quick sort to the array that is created by the initializeArray function.
+The algorithm picks a pivot point in the middle of the array. Once that is done it compares each side of the pivot to the pivot itself.
+The function is called recursively if the left and right sub arrays are not sorted.
 
+Pre-conditions: Requires an array, the starting index and the ending index to be passed in.
+Post-conditions: Returns the number of operations that had to be done in order to sort the array.
+*/
 int Sorting::QuickSort(int random[], int left, int right)
 {
     int complexity = 0;     //setting up operations counter
@@ -145,7 +177,15 @@ int Sorting::QuickSort(int random[], int left, int right)
     }
     return complexity;
 }
+/*
+Function Description:
+This function applies the algorithm for selection sort to the array that is created by the initializeArray function.
+The algorithm loops through the array and finds the minimum and shifts that down to the first index and each subsequent
+minimum is then placed in the next index.
 
+Pre-conditions: Requires nothing to be passed in since the copyArray function is used within.
+Post-conditions: Returns the number of operations that had to be done in order to sort the array. Memory freed by deleting the array created.
+*/
 int Sorting::SelectionSort()
 {
     int minIndex;
@@ -173,7 +213,15 @@ int Sorting::SelectionSort()
     delete[] dataNew;
     return complexity;
 }
+/*
+Function Description:
+This function applies the algorithm for shell sort to the array that is created by the initializeArray function.
+The algorithm starts by comparing values that are many indexes apart and places them according to that comparison.
+The algorithm then does this over and over again reducing the gap each time.
 
+Pre-conditions: Requires nothing to be passed in since the copyArray function is used within.
+Post-conditions: Returns the number of operations that had to be done in order to sort the array. Memory freed by deleting the array created.
+*/
 int Sorting::ShellSort()
 {
     int complexity = 0;
@@ -205,7 +253,15 @@ int Sorting::ShellSort()
     delete[] dataNew;
     return complexity;
 }
+ /*
+Function Description:
+This function applies the algorithm for gnome sort to the array that is created by the initializeArray function.
+The algorithm finds the first instance where two values that are next to each other are in the wrong order and then it swaps them.
+It then goes back one index and compares it to the value next to it and continues swapping.
 
+Pre-conditions: Requires nothing to be passed in since the copyArray function is used within.
+Post-conditions: Returns the number of operations that had to be done in order to sort the array. Memory freed by deleting the array created.
+*/
 int Sorting::GnomeSort()
 {
     int complexity = 0;
@@ -230,5 +286,6 @@ int Sorting::GnomeSort()
     }
     //checkSort(dataNew);
     //printArray(dataNew);
+    delete[] dataNew;
     return complexity;
 }
