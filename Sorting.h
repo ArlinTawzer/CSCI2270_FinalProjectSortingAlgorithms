@@ -22,7 +22,7 @@ class Sorting
         void specialCases(int value);
     protected:
     private:
-        int *dataTable;
+        int *dataTable = NULL;
         int array_size; //use to know how many variables there are in the array
         int *copyArray(); //return a copy of the array so that it can be sorted
         void printArray(int *array); //print out all the values in the array

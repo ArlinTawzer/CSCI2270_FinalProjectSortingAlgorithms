@@ -53,10 +53,6 @@ void Sorting::runAlgorithms()
 	int shellSortValue = ShellSort();
 	cout << "Shell Sort cost: " << shellSortValue << endl;
 
-	//Exchange Sort
-	int exchangeSortValue = ExchangeSort();
-	cout << "Exchange Sort cost: " << exchangeSortValue << endl;
-
 	// Quick Sort
 	int quickSortValue = QuickSort();
 	cout << "Quick Sort cost: " << quickSortValue << endl;
@@ -78,7 +74,11 @@ void Sorting::createRandArray()
 {
 	cout << "Creating the random array..." << endl;
     //Initialize the array and delete the old one
-    delete[] dataTable;
+    if (dataTable != NULL)
+    {
+        cout << " In if" << endl;
+        delete[] dataTable;
+    }
     int *randArray = new int[array_size];
 
     srand(time(NULL));                    //imported a library that has a rand method
@@ -102,6 +102,7 @@ void Sorting::createRandArray()
     cout << "Done generating random array." << endl;
     dataTable = randArray;          //Changing the global variable
 }
+
 /*
 Function Description:
 This function copies the random array after it has been initialized. This function is used in each implementation of the sorting algorithms to ensure that
