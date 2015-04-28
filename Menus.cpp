@@ -63,13 +63,13 @@ void Sorting::moreInformation() // use to give information on the sorting algori
 void Sorting::settings()
 {
     int input;
-    while(input != 5)
+    while(input != 3)
     {
         cout << "===========================================" << endl;
     	cout << "Welcome to the Settings menu, What would you like to do?" << endl;
 		cout << "1. Change Array Size" << endl;
 		cout << "2. Use Special Array Case" << endl;
-		cout << "5. Go Back" << endl;
+		cout << "3. Go Back" << endl;
 
 		cin >> input;
         //clear out cin
@@ -92,7 +92,7 @@ void Sorting::settings()
                 break;
             case 2:
                 cout << "===========================================" << endl;
-            	cout << "Which case would you like to use?" << array_size << endl;
+            	cout << "Which case would you like to use? Please keep in mind that the array must be initialized first." << endl;
             	cout << "1. Last and First values switched" << endl;
             	cout << "2. Already sorted" << endl;
             	cout << "3. Perfectly Reversed" << endl;
