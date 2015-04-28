@@ -205,3 +205,30 @@ int Sorting::ShellSort()
     delete[] dataNew;
     return complexity;
 }
+
+int Sorting::GnomeSort()
+{
+    int complexity = 0;
+    int *dataNew = copyArray();
+    int temp;
+
+    int position = 0;
+
+    while(position < array_size)
+    {
+        if (dataNew[position] >= dataNew[position-1] || position == 0)    //Start the index at one to compare it with the previous
+        {
+            position = position +1;
+        }
+        else
+        {
+            temp = dataNew[position];                         //Swap the values in the array
+            dataNew[position] = dataNew[position -1];
+            dataNew[--position] = temp;
+            complexity++;
+        }
+    }
+    //checkSort(dataNew);
+    //printArray(dataNew);
+    return complexity;
+}

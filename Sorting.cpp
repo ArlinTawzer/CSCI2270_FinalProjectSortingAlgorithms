@@ -47,6 +47,10 @@ void Sorting::runAlgorithms()
 	// Quick Sort
 	int quickSortValue = QuickSort();
 	cout << "Quick Sort cost: " << quickSortValue << endl;
+
+	//Gnome Sort
+	int gnomeSortValue = GnomeSort();
+	cout << "Gnome Sort cost: " << gnomeSortValue << endl;
 }
 
 void Sorting::createRandArray()

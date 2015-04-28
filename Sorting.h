@@ -17,6 +17,7 @@ class Sorting
         void settings();
         int QuickSort();
         int QuickSort(int random[], int left, int right);
+        int GnomeSort();
         int SelectionSort();
         int ShellSort();
         void specialCases(int value);
