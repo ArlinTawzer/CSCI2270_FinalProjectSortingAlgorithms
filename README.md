@@ -35,8 +35,6 @@ This code should be able to compile and run on most operating systems used.
 - Girish Ramkumar
 - Arlin Tawzer
 
-# Contributors:
-
 # Open Issues/Bugs/Improvements:
 - New pre-made special array options under the settings menu.
 - More sorting algorithms to compare to the existing ones.
