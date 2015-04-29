@@ -32,10 +32,10 @@ This program uses the C++ libraries.
 This code should be able to compile and run on most operating systems used.
 
 # Group Members: 
-Soham Shah
-Dmytro Ryzhkov
-Girish Ramkumar
-Arlin Tawzer
+Soham Shah,
+Dmytro Ryzhkov,
+Girish Ramkumar,
+Arlin Tawzer,
 
 # Contributors:
 
