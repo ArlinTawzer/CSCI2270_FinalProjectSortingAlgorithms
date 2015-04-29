@@ -9,9 +9,9 @@ In order to use the main part of the program the user must first initialize the 
 SortingImplementation.cpp:
 
     copyArray() 
-- Returns a copy of the random array for the sorting algorithm to run.
+    Returns a copy of the random array for the sorting algorithm to run.
     initializeArray()
-- Initializes an array when called.
+    Initializes an array when called.
 - printArray(array) - Prints off the array you pass in.
 - checkSort(array) - Ensures that the array passed in is in fact sorted.
 - createRandArray() - Uses random integers to create the array to be sorted in the class.
