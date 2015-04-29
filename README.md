@@ -9,21 +9,21 @@ In order to use the main part of the program the user must first initialize the 
 # Documentation:
 
 SortingImplementation.cpp:
--copyArray() - Returns a copy of the random array for the sorting algorithm to run.
--initializeArray() - Initializes an array when called.
--printArray(array) - Prints off the array you pass in.
--checkSort(array) - Ensures that the array passed in is in fact sorted.
--createRandArray() - Uses random integers to create the array to be sorted in the class.
--runAlgorithms() - Runs each sorting algorithm implemented and prints off its cost.
--specialCases(int) - Takes in input from settings menu to create a pre-made array.
+- copyArray() - Returns a copy of the random array for the sorting algorithm to run.
+- initializeArray() - Initializes an array when called.
+- printArray(array) - Prints off the array you pass in.
+- checkSort(array) - Ensures that the array passed in is in fact sorted.
+- createRandArray() - Uses random integers to create the array to be sorted in the class.
+- runAlgorithms() - Runs each sorting algorithm implemented and prints off its cost.
+- specialCases(int) - Takes in input from settings menu to create a pre-made array.
 
 SortingAlgorithms.cpp:
--bubbleSort() - Sorts an array using the bubble sort algorithm and returns complexity counter.
--insertionSort() - Sorts an array using the insertion sort algorithm and returns complexity counter.
--shellSort() - Sorts an array using the shell sort algorithm and returns complexity counter.
--selectionSort() - Sorts an array using the selection sort algorithm and returns complexity counter.
--quickSort() - Sorts an array using the quick sort algorithm and returns the operation count.
--gnomeSort() - Sorts an array using the gnome sort algorithm and returns the operation count.
+- bubbleSort() - Sorts an array using the bubble sort algorithm and returns complexity counter.
+- insertionSort() - Sorts an array using the insertion sort algorithm and returns complexity counter.
+- shellSort() - Sorts an array using the shell sort algorithm and returns complexity counter.
+- selectionSort() - Sorts an array using the selection sort algorithm and returns complexity counter.
+- quickSort() - Sorts an array using the quick sort algorithm and returns the operation count.
+- gnomeSort() - Sorts an array using the gnome sort algorithm and returns the operation count.
 
 # Dependencies: 
 This program uses the C++ libraries.
@@ -32,10 +32,10 @@ This program uses the C++ libraries.
 This code should be able to compile and run on most operating systems used.
 
 # Group Members: 
--Soham Shah,
--Dmytro Ryzhkov,
--Girish Ramkumar,
--Arlin Tawzer,
+- Soham Shah,
+- Dmytro Ryzhkov,
+- Girish Ramkumar,
+- Arlin Tawzer,
 
 # Contributors:
 
