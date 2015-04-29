@@ -3,6 +3,7 @@ The purpose of this program is to write code to compare the algorithmic complexi
 
 # How to Run:
 You can create a project in CodeBlocks and add SortingImplementation.cpp, SortingAlgorithms.cpp, Menus.cpp, main.cpp and Sorting.h to the project. You should then be able to compile and run the project.
+
     In order to use the main part of the program the user must first initialize the array before they can call the sort option from the main menu. They can then compare the cost for each algorithm implemented. They can then learn about the different algorithms by navigating to the more information menu and selecting which algorithm they want to learn about. They can also change the array itself by going to the settings menu and playing around with the size of the array and how the array is ordered and how that affects the cost of each of the sorts. The array must be initialized before you can change the settings of the array.
 
 # Documentation:
