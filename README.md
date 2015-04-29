@@ -7,7 +7,8 @@ In order to use the main part of the program the user must first initialize the 
 # Documentation:
 
 SortingImplementation.cpp:
-- copyArray() - Returns a copy of the random array for the sorting algorithm to run.
+    copyArray() 
+- Returns a copy of the random array for the sorting algorithm to run.
 - initializeArray() - Initializes an array when called.
 - printArray(array) - Prints off the array you pass in.
 - checkSort(array) - Ensures that the array passed in is in fact sorted.
