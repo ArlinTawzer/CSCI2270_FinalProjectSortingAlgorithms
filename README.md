@@ -2,7 +2,8 @@
 The purpose of this program is to write code to compare the algorithmic complexity of various sorting algorithms over a randomized data set. We will do this by first randomizing integers from 1 through 1000 and placing them into an array. Then we will clone the array several times. Each of the cloned arrays will have a separate sorting algorithm applied to it and we will then output which algorithm took the least algorithmic cost.
 
 # How to Run:
-In order to use the main part of the program the user must first initialize the array before they can call the sort option from the main menu. They can then compare the cost for each algorithm implemented. They can then learn about the different algorithms by navigating to the more information menu and selecting which algorithm they want to learn about. They can also change the array itself by going to the settings menu and playing around with the size of the array and how the array is ordered and how that affects the cost of each of the sorts. The array must be initialized before you can change the settings of the array.
+You can create a project in CodeBlocks and add SortingImplementation.cpp, SortingAlgorithms.cpp, Menus.cpp, main.cpp and Sorting.h to the project. You should then be able to compile and run the project.
+    In order to use the main part of the program the user must first initialize the array before they can call the sort option from the main menu. They can then compare the cost for each algorithm implemented. They can then learn about the different algorithms by navigating to the more information menu and selecting which algorithm they want to learn about. They can also change the array itself by going to the settings menu and playing around with the size of the array and how the array is ordered and how that affects the cost of each of the sorts. The array must be initialized before you can change the settings of the array.
 
 # Documentation:
 
