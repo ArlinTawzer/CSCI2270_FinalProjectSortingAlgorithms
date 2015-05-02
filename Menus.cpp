@@ -107,11 +107,18 @@ void Sorting::settings()
             	cout << "Current Array Size for generated array is: " << array_size << endl;
             	cout << "What would you like to change it to?" << endl;
             	cin >> input2;
-                cin.clear();
-                cin.ignore(10000,'\n');
-                array_size = input2;
-                initializeArray();
-                cout << "Array Size successfully changed to: " << array_size << endl;
+                if (input2 <=0)
+                {
+                    cout << "Please input a valid positive integer" << endl;
+                }
+                else
+                {
+                    cin.clear();
+                    cin.ignore(10000,'\n');
+                    array_size = input2;
+                    initializeArray();
+                    cout << "Array Size successfully changed to: " << array_size << endl;
+                }
                 break;
             case 2:
                 cout << "===========================================" << endl;
