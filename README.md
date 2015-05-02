@@ -29,6 +29,7 @@ SortingAlgorithms.cpp:
 
 # Dependencies: 
 This program uses the C++ libraries.
+Make sure to compile using C++ 2011
 
 # System Requirements: 
 This code should be able to compile and run on most operating systems used.
