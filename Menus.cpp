@@ -39,29 +39,34 @@ void Sorting::moreInformation() // use to give information on the sorting algori
             case 1:
                 cout << "===========================================" << endl;
             	cout << "A bubble sort has complexity of n^2" << endl;
-                cout << "The most difficult order is when the array is in reverse order where the largest value is at the front and so on." << endl;
+                cout << "This algorithm works by comparing each value to the value next to it. If a value is greater than the one after it, it will 'bubble' up through the array until it is where it is supposed to be." << endl;
                 break;
             case 2:
                 cout << "===========================================" << endl;
                 cout << "Insertion Sort has complexity of n^2." << endl;
+                cout << "This algorithm works similar to the bubble sort algorithm, but instead of moving the greater value up, it will move the lesser value down the array until it is where it belongs." << endl;
                 break;
             case 3:
                 cout << "===========================================" << endl;
                 cout << "Selection Sort has complexity of n^2." << endl;
+                cout << "This algorithm works by finding the minimum value of the array, and placing it as the first value. It then loops through again moving the minimum value of the remainder of the array to the next lowest position in the array." << endl;
                 break;
             case 4:
                 cout << "===========================================" << endl;
-                cout << "Quick sort in the worst case scenario is n^2. However, it's generally of nlog(n) complexity" << endl;
+                cout << "Quick sort in the worst case scenario is n^2. However, it's generally of nlog(n) complexity." << endl;
+                cout << "This algorithm works by finding a pivot point near the middle of the array. It then compares values on either side of the pivot and moves the values accordingly. It then works recursively, moving the pivot and all the values until the array is sorted." << endl;
                 break;
             case 5:
                 cout << "===========================================" << endl;
                 cout << "Gnome Sort has a worst case complexity of n^2." << endl;
                 cout << "The best case has a complexity of just n but that is when the array is almost sorted already." << endl;
+                cout << "This algorithm works by comparing neighboring values, and swapping them if necessary. If it swaps the values, it then compares the two previous values, and swaps them if necessary until the previous values are in the correct order." << endl;
                 break;
             case 6:
                 cout << "===========================================" << endl;
                 cout << "Shell Sort has a worst case complexity of nlog^(2)n." << endl;
                 cout << "The best case has a complexity of just n." << endl;
+                cout << "This algorithm works by comparing values that are very far from each other, and swapping them if necessary. It continuously does these comparisons, narrowing the gap each time, until the array is sorted." << endl;
                 break;
             case 7:
                 cout << "Goodbye!" << endl;
