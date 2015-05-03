@@ -255,6 +255,7 @@ int Sorting::GnomeSort()
         if (dataNew[position] >= dataNew[position-1] || position == 0)    //Start the index at one to compare it with the value at the previous index
         {
             position = position +1;    //Iterate if the array at those two points are correct
+            complexity++;
         }
         else
         {
